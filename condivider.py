@@ -9,15 +9,10 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import LSTM
 from keras.optimizers import RMSprop
-#scarico i dati
-print("Download file...")
-path = get_file('divina_commedia.txt', origin='https://www.retineuraliartificiali.net/keras_tutorial/divina_commedia.txt')
-print("fatto!")
+#apro i files
 print("Apertura del file")
-with io.open(path, encoding='utf-8') as f:
+with open('divinacommedia.txt', 'r') as f:
     text = f.read().lower()
-with open ('divina.commedia.txt','w') as f:
-    f.write (text)
 chars = sorted (list (set (text)))
 char_indices = dict((c, i) for i, c in enumerate(chars)) # valore - numero
 indices_char = dict((i, c) for i, c in enumerate(chars)) # numero - valore

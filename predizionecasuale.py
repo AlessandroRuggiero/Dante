@@ -5,13 +5,9 @@ import sys
 import time
 from keras.models import load_model
 from keras.utils.data_utils import get_file
-print ('linrerie importate')
-#scarico i dati
-print("Download file...")
-path = get_file('divina_commedia.txt', origin='https://www.retineuraliartificiali.net/keras_tutorial/divina_commedia.txt')
-print("fatto!")
+print ('librerie importate')
 print("Apertura del file")
-with io.open(path, encoding='utf-8') as f:
+with open('divinacommedia.txt', 'r') as f:
     text = f.read().lower()
 print('Lunghezza del testo:', len(text))
 print (text [-31:])
